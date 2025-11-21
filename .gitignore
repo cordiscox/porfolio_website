@@ -1,0 +1,25 @@
+# Dependencies and caches
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build output
+build/
+dist/
+
+# Environment and local config
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
+
+# Logs and debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Other artifacts
+*.zip
+CV_JMCordisco.pdf
