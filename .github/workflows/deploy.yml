@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           source: "build/*"
-          target: "~/porfolio_website/build"
+          target: "~/portfolio_website/build"
 
       - name: Publish build on server
         uses: appleboy/ssh-action@v1.0.3
@@ -41,6 +41,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             sudo rm -rf /var/www/portfolio/*
-            sudo cp -r ~/porfolio_website/build/* /var/www/portfolio/
+            sudo cp -r ~/portfolio_website/build/* /var/www/portfolio/
             sudo chown -R www-data:www-data /var/www/portfolio
             sudo systemctl reload nginx
